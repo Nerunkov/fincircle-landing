@@ -124,14 +124,15 @@ mark{background:var(--mark);color:inherit;padding:1px 4px;border-radius:5px;-web
 
 /* ведущие */
 .hosts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.host{background:var(--grey);border-radius:24px;padding:14px;display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;min-width:0}
+.host{background:var(--grey);border-radius:24px;padding:14px;display:grid;grid-template-columns:170px minmax(0,1fr);gap:22px;min-width:0}
 .host img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 25%;border-radius:16px;display:block}
 .host .body{padding:12px 10px 10px 0;display:flex;flex-direction:column;gap:12px;min-width:0}
 .host h3{font-family:Unbounded,sans-serif;text-transform:uppercase;font-size:24px}
 .host .role{align-self:flex-start;font-size:13px;font-weight:600;background:var(--card);color:var(--green);padding:4px 11px;border-radius:999px}
 .host p{color:var(--ink2);font-size:16px}
-.host ul{margin:auto 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
-.host li{font-size:13px;padding:5px 11px;border-radius:999px;box-shadow:inset 0 0 0 1px #c9c4b9;color:var(--ink2)}
+.host ul{margin:auto 0 0;padding:0;list-style:none;display:grid}
+.host li{font-size:14.5px;font-weight:500;padding-block:9px;border-top:1px solid #d6d1c6;color:var(--ink);display:grid;grid-template-columns:18px 1fr}
+.host li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);margin-top:8px}
 
 /* ИндексБар */
 .ib .in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
@@ -264,8 +265,8 @@ footer .disc{flex-basis:100%;font-size:13px}
     <div class="stage">
       <h1>Где сейчас <em>большие деньги</em> на рынке США</h1>
       <div class="faces-row">
-        <div class="float f1"><img src="img/anatoly-av.jpg" alt=""><div><b>Анатолий</b><span>макроэкономика</span></div></div>
-        <div class="float f2"><img src="img/gosha-av.jpg" alt=""><div><b>Гоша</b><span>компании и портфель</span></div></div>
+        <div class="float f1"><img src="img/anatoly-av.jpg" alt=""><div><b>Анатолий</b><span>Макроэкономика</span></div></div>
+        <div class="float f2"><img src="img/gosha-av.jpg" alt=""><div><b>Гоша</b><span>Компании и портфель</span></div></div>
       <div class="seal" aria-hidden="true">
         <svg viewBox="0 0 150 150"><defs><path id="c" d="M75,75 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs><text><textPath href="#c">Москва · онлайн · Москва · онлайн · </textPath></text></svg>
         <b>08<small>ноября</small></b>
@@ -275,7 +276,7 @@ footer .disc{flex-basis:100%;font-size:13px}
     <div class="low">
       <p class="sub">Шесть часов с двумя трейдерами: <b>куда идёт капитал, какие компании мы покупаем сами</b> и как превратить новость в сделку.</p>
       <a class="next" data-goal="cta_hero" href="#reg">
-        <div><small>Мастер-класс</small><b>Где сейчас большие деньги</b><span>8 ноября, 12:00–18:00 · <span id="countdown" style="display:inline"></span></span></div>
+        <div><small>Мастер-класс</small><b>Москва и онлайн</b><span>8 ноября, 12:00–18:00 МСК · <span id="countdown" style="display:inline"></span></span></div>
         <span class="go"><svg><use href="#arr"/></svg></span>
       </a>
     </div>
@@ -287,7 +288,7 @@ footer .disc{flex-basis:100%;font-size:13px}
     <div><span class="tag">#что унесёте</span><h2>Картину рынка на ближайшие месяцы</h2></div>
     <div class="lead">
       <p>Мы зарабатываем, <mark>когда двигаются крупные деньги</mark>. На мастер-классе покажем, как видим это сами, — на живых примерах, а не на учебных.</p>
-      <p>За шесть часов разберём <mark>четыре вещи</mark> — и станет понятно, что делать с портфелем дальше.</p>
+      <p>За шесть часов разберём четыре темы — и станет понятно, что делать с портфелем дальше.</p>
     </div>
   </div>
   <div class="in">
@@ -306,8 +307,8 @@ footer .disc{flex-basis:100%;font-size:13px}
     <div class="steps">
       <div class="step"><span class="k">Часть 1</span><h3>Что сейчас двигает рынок США</h3><p>Макро, ФРС, ожидания рынка: где крупные деньги и куда они пойдут дальше.</p><div class="who"><span class="faces"><img src="img/anatoly-av.jpg" alt=""></span>Анатолий</div></div>
       <div class="step"><span class="k">Часть 2</span><h3>Компании, которые мы смотрим</h3><p>Разбор отчётов и логика выбора: почему компания попала в портфель и какие риски учитываем.</p><div class="who"><span class="faces"><img src="img/gosha-av.jpg" alt=""></span>Гоша</div></div>
-      <div class="step"><span class="k">Часть 3</span><h3>Сценарии на ближайшие месяцы</h3><p>Соединяем макро и компании: что может поддержать движение и где легко ошибиться.</p><div class="who"><span class="faces"><img src="img/anatoly-av.jpg" alt=""><img src="img/gosha-av.jpg" alt=""></span>Оба</div></div>
-      <div class="step"><span class="k">Финал</span><h3>Ваши вопросы</h3><p>Сделки, идеи и сомнения участников.</p><div class="who"><span class="faces"><img src="img/anatoly-av.jpg" alt=""><img src="img/gosha-av.jpg" alt=""></span>Оба</div></div>
+      <div class="step"><span class="k">Часть 3</span><h3>Сценарии на ближайшие месяцы</h3><p>Соединяем макро и компании: что может поддержать движение и где легко ошибиться.</p><div class="who"><span class="faces"><img src="img/anatoly-av.jpg" alt=""><img src="img/gosha-av.jpg" alt=""></span>Анатолий и Гоша</div></div>
+      <div class="step"><span class="k">Финал</span><h3>Ваши вопросы</h3><p>Сделки, идеи и сомнения участников.</p><div class="who"><span class="faces"><img src="img/anatoly-av.jpg" alt=""><img src="img/gosha-av.jpg" alt=""></span>Анатолий и Гоша</div></div>
     </div>
     <div class="timing"><span class="chip">12:00 старт</span><span class="chip">18:00 финал</span></div>
   </div>
@@ -321,9 +322,9 @@ footer .disc{flex-basis:100%;font-size:13px}
         <img src="img/anatoly.jpg" alt="Анатолий">
         <div class="body">
           <h3>Анатолий</h3>
-          <span class="role">Макроэкономика и глобальные рынки</span>
-          <p>Как экономические события влияют на цены. Ищет возможности там, где двигается капитал.</p>
-          <ul><li>На рынке США с 2006 года</li><li>Сооснователь United Traders</li><li>Соведущий «Хэш и кэш» на РБК</li></ul>
+          <span class="role">Макроэкономика</span>
+          <p>Следит, как экономические события двигают цены, и ищет возможности там, куда идёт капитал.</p>
+          <ul><li>20+ лет на рынке США</li><li>Сооснователь United Traders</li><li>Соведущий «Хэш и кэш» на РБК</li></ul>
         </div>
       </article>
       <article class="host">
@@ -331,8 +332,8 @@ footer .disc{flex-basis:100%;font-size:13px}
         <div class="body">
           <h3>Гоша</h3>
           <span class="role">Компании и портфель</span>
-          <p>Разбирает финансовые показатели компаний и собирает портфель кружка. Сделки на несколько дней или недель.</p>
-          <ul><li>10+ лет на рынке США</li><li>CFA</li><li>Помнит цифры каждого отчёта Nvidia</li></ul>
+          <p>Разбирает отчётность компаний — помнит цифры каждого отчёта Nvidia — и собирает портфель кружка.</p>
+          <ul><li>10+ лет на рынке США</li><li>Сертификат CFA</li><li>Ведёт портфель кружка</li></ul>
         </div>
       </article>
     </div>
@@ -343,7 +344,7 @@ footer .disc{flex-basis:100%;font-size:13px}
   <div class="in">
     <div class="text">
       <span class="tag">#не хотите ждать</span>
-      <h2 style="margin-top:18px">Начните с «ИндексБара»</h2>
+      <h2 style="margin-top:18px">Начните с ИндексБара</h2>
       <p>Открытый эфир каждый четверг в 19:00 МСК. Разбираем события недели, делимся взглядом на рынок и отвечаем на вопросы. Лучший способ познакомиться с нами до мастер-класса.</p>
       <div class="actions"><a class="btn" data-goal="indexbar_click" href="https://www.youtube.com/playlist?list=PLlpqyUsdzBXea1fT0k_bxXZ4CjO-POHF5">Все выпуски</a><a class="btn line" data-goal="tg_click" href="https://t.me/circlefin">Анонсы в Telegram</a></div>
     </div>
@@ -356,7 +357,7 @@ footer .disc{flex-basis:100%;font-size:13px}
 
 <section class="panel" id="reg">
   <div class="in">
-    <div class="head"><span class="tag">#как попасть</span><h2>Участие — в подписке PRO</h2><p>Мастер-класс — для участников «Финансового кружка». Оформляете PRO на месяц и получаете <mark>и мастер-класс, и всё, что есть в кружке</mark>.</p></div>
+    <div class="head"><span class="tag">#как попасть</span><h2>Участие — в подписке PRO</h2><p>Мастер-класс — для участников «Финансового кружка». Оформляете PRO на месяц — и получаете <mark>мастер-класс и всё, что есть в кружке</mark>.</p></div>
     <div class="afisha">
       <div class="ticket">
         <div class="date"><span class="ico"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><b>8 ноября, 12:00<small>воскресенье · до 18:00 МСК</small></b></div>
@@ -367,13 +368,13 @@ footer .disc{flex-basis:100%;font-size:13px}
         </dl>
         <div class="price">8 900 ₽<small>PRO на месяц</small></div>
         <a class="btn ink" href="https://boosty.to/fincircle" data-pay="ticket">Оформить PRO и участвовать <svg><use href="#arr"/></svg></a>
-        <p class="fine">Оплата на Boosty. Условия продления и отмены указаны перед оплатой.</p>
+        <p class="fine">Оплата на Boosty. Условия продления и отмены — на странице оплаты.</p>
       </div>
       <div class="route">
         <ol>
           <li><span class="ico">1</span><div><h3>Оформляете PRO на Boosty</h3><p>Месяц подписки — 8 900 ₽.</p></div></li>
-          <li><span class="ico">2</span><div><h3>Попадаете в закрытый чат</h3><p>Там ждёт приветствие, детали мастер-класса и ссылка на трансляцию. Хотите в зал — записываетесь в чате: 30 мест, по очереди.</p></div></li>
-          <li><span class="ico">3</span><div><h3>8 ноября — мастер-класс</h3><p>В зале в Москве или в закрытой трансляции на YouTube.</p></div></li>
+          <li><span class="ico">2</span><div><h3>Попадаете в закрытый чат</h3><p>Там ждёт приветствие, детали мастер-класса и ссылка на трансляцию. Хотите в зал — записываетесь в чате: 30 мест, в порядке очереди.</p></div></li>
+          <li><span class="ico">3</span><div><h3>8 ноября — мастер-класс</h3><p>Вживую в Москве или в закрытой трансляции на YouTube.</p></div></li>
         </ol>
         <div class="incl"><h3>В PRO входит</h3><ul><li class="on">Мастер-класс 8 ноября</li><li>Закрытый чат</li><li>Market Pulse</li><li>Портфель кружка</li><li>Еженедельные созвоны</li></ul></div>
       </div>
@@ -384,21 +385,21 @@ footer .disc{flex-basis:100%;font-size:13px}
 
 <section class="panel" id="club">
   <div class="in">
-    <div class="head"><span class="tag">#что внутри PRO</span><h2>Курсы заканчиваются — кружок нет</h2><p>«Финансовый кружок» — сообщество тех, кто всерьёз торгует американский рынок. Каждый день: живые сделки, аналитика и лучшие нарративы рынка.</p></div>
+    <div class="head"><span class="tag">#что внутри PRO</span><h2>Курсы заканчиваются, кружок — нет</h2><p>«Финансовый кружок» — сообщество тех, кто всерьёз торгует на американском рынке. Каждый день — живые сделки, аналитика и главные идеи рынка.</p></div>
     <div class="feats">
       <div class="feat"><span class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></span><h3>Market Pulse</h3><p>Главные события и направления с нашими комментариями.</p></div>
-      <div class="feat"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v9l7 4"/><circle cx="12" cy="12" r="9"/></svg></span><h3>Портфель кружка</h3><p>Позиции и логика решений — публично и открыто.</p></div>
+      <div class="feat"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v9l7 4"/><circle cx="12" cy="12" r="9"/></svg></span><h3>Портфель кружка</h3><p>Позиции и логика решений — открыто.</p></div>
       <div class="feat"><span class="ico"><svg viewBox="0 0 24 24"><path d="M4 17l5-5 4 4 7-8"/><path d="M15 8h5v5"/></svg></span><h3>Короткие сделки</h3><p>Наблюдения и торговые сценарии в течение дня.</p></div>
       <div class="feat"><span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2.5"/><path d="M16 10l5-3v10l-5-3"/></svg></span><h3>Еженедельные созвоны</h3><p>Разбираем сделки и вопросы участников.</p></div>
       <div class="feat"><span class="ico"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg></span><h3>Закрытый чат</h3><p>Всегда есть кому задать вопрос.</p></div>
-      <div class="feat hi"><span class="ico"><svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5z"/><path d="M9 10h6M9 14h6"/></svg></span><h3>Библиотека</h3><p>Материалы и записи разборов.</p></div>
+      <div class="feat"><span class="ico"><svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5z"/><path d="M9 10h6M9 14h6"/></svg></span><h3>Библиотека</h3><p>Материалы и записи разборов.</p></div>
     </div>
   </div>
 </section>
 
 <section class="cta">
   <div class="in">
-    <div><h2>Мастер-класс 8 ноября</h2><p>В зале в Москве — 30 мест, онлайн — без ограничений. <span id="countdown2"></span></p></div>
+    <div><h2>Мастер-класс 8 ноября</h2><p>В Москве — 30 мест в зале, онлайн — без ограничений. <span id="countdown2"></span></p></div>
     <a class="btn ink" href="https://boosty.to/fincircle" data-pay="final">Оформить PRO и участвовать <svg><use href="#arr"/></svg></a>
   </div>
 </section>
