@@ -72,7 +72,7 @@ mark{background:var(--mark);color:inherit;padding:1px 4px;border-radius:5px;-web
   linear-gradient(var(--bg2) 1px,transparent 1px) 0 0/48px 48px,
   linear-gradient(90deg,var(--bg2) 1px,transparent 1px) 0 0/48px 48px,var(--bg)}
 .hero .tag{background:var(--bg2);color:var(--lime)}
-.hero h1{font-size:clamp(40px,6.4vw,88px);margin-top:26px}
+.hero h1{font-size:clamp(38px,6.4vw,80px);margin-top:26px}
 .hero .stage{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:32px;align-items:center}
 .faces-row{position:relative;height:390px}
 .hero h1 em{font-style:normal;color:var(--lime)}
@@ -200,6 +200,7 @@ footer .links{display:flex;gap:24px;flex-wrap:wrap}
 footer .disc{flex-basis:100%;font-size:13px}
 
 .stick{display:none}
+@media (max-width:380px){.nav .btn{display:none}}
 
 @media (max-width:1000px){
   .nav nav{display:none}
@@ -365,26 +366,26 @@ footer .disc{flex-basis:100%;font-size:13px}
                     <div><dt>Формат</dt><dd>закрытая трансляция <span>· ссылка в чате PRO</span></dd></div>
           <div><dt>Участие</dt><dd>подписка PRO</dd></div>
         </dl>
-        <div class="price">8 900 ₽<small>PRO на месяц</small></div>
+        <div class="price">8&nbsp;900&nbsp;₽<small>PRO на месяц</small></div>
         <a class="btn ink" href="https://boosty.to/fincircle/purchase/3923882?ssource=DIRECT&amp;share=subscription_link" data-pay="ticket">Оформить PRO и участвовать <svg><use href="#arr"/></svg></a>
         <p class="fine">Оплата на Boosty. Условия продления и отмены — на странице оплаты.</p>
       </div>
       <div class="route">
         <ol>
-          <li><span class="ico">1</span><div><h3>Оформляете PRO на Boosty</h3><p>Месяц подписки — 8 900 ₽.</p></div></li>
+          <li><span class="ico">1</span><div><h3>Оформляете PRO на Boosty</h3><p>Месяц подписки — 8&nbsp;900&nbsp;₽.</p></div></li>
           <li><span class="ico">2</span><div><h3>Попадаете в закрытый чат</h3><p>Там ждёт приветствие, детали мастер-класса и ссылка на трансляцию.</p></div></li>
           <li><span class="ico">3</span><div><h3>8 ноября — мастер-класс</h3><p>Закрытая трансляция на YouTube, ссылка — в чате PRO.</p></div></li>
         </ol>
         <div class="incl"><h3>В PRO входит</h3><ul><li class="on">Мастер-класс 8 ноября</li><li>Закрытый чат</li><li>Market Pulse</li><li>Портфель кружка</li><li>Еженедельные созвоны</li><li class="on">Спецоффер от UTEX</li></ul></div>
       </div>
     </div>
-    <p class="alt">Хотите начать с основ? <a href="https://boosty.to/fincircle" data-pay="course">PRO + курс — 16 700 ₽ за два месяца</a>: пять вводных лекций и мастер-класс 8 ноября.</p>
+    <p class="alt">Хотите начать с основ? <a href="https://boosty.to/fincircle" data-pay="course">PRO + курс — 16&nbsp;700&nbsp;₽ за два месяца</a>: пять вводных лекций и мастер-класс 8 ноября.</p>
   </div>
 </section>
 
 <section class="panel" id="club">
   <div class="in">
-    <div class="head"><span class="tag">#что внутри PRO</span><h2>Курсы заканчиваются, кружок — нет</h2><p>«Финансовый кружок» — сообщество тех, кто всерьёз торгует на американском рынке. Каждый день — живые сделки, аналитика и главные идеи рынка.</p></div>
+    <div class="head"><span class="tag">#что внутри PRO</span><h2>Курсы закан&shy;чиваются, кружок — нет</h2><p>«Финансовый кружок» — сообщество тех, кто всерьёз торгует на американском рынке. Каждый день — живые сделки, аналитика и главные идеи рынка.</p></div>
     <div class="feats">
       <div class="feat"><span class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></span><h3>Market Pulse</h3><p>Главные события и направления с нашими комментариями.</p></div>
       <div class="feat"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v9l7 4"/><circle cx="12" cy="12" r="9"/></svg></span><h3>Портфель кружка</h3><p>Позиции и логика решений — открыто.</p></div>
@@ -420,8 +421,8 @@ footer .disc{flex-basis:100%;font-size:13px}
   var a=document.getElementById('countdown'),b=document.getElementById('countdown2');
   if(d<0){a.textContent='';b.textContent='';return}
   var w=(d%10==1&&d%100!=11)?'день':(d%10>=2&&d%10<=4&&(d%100<10||d%100>=20))?'дня':'дней';
-  a.textContent=d===0?'сегодня':'через '+d+' '+w;
-  b.innerHTML=d===0?'<mark>Мастер-класс сегодня.</mark>':'До мастер-класса <mark>'+d+' '+w+'</mark>.';
+  a.textContent=d===0?'сегодня':'через\u00a0'+d+'\u00a0'+w;
+  b.innerHTML=d===0?'<mark>Мастер-класс сегодня.</mark>':'До мастер-класса <mark>'+d+'\u00a0'+w+'</mark>.';
 })();
 </script>
 
