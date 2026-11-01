@@ -260,6 +260,7 @@ footer .disc{flex-basis:100%;font-size:13px}
 .faq details[open] summary::after{transform:rotate(45deg)}
 .faq details p{padding:0 0 22px;color:var(--ink2);max-width:62ch}
 .faq a{color:var(--green);font-weight:600}
+[hidden]{display:none!important}
 /* cookie */
 .cookie{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;width:min(560px,calc(100% - 24px));display:flex;align-items:center;gap:14px;background:var(--card);color:var(--ink);border-radius:18px;padding:12px 12px 12px 18px;box-shadow:0 14px 40px -12px rgba(0,0,0,.45);font-size:14px;line-height:1.45}
 .cookie p{flex:1;min-width:0}
@@ -403,7 +404,7 @@ footer .disc{flex-basis:100%;font-size:13px}
   </div>
 </section>
 
-<section class="panel" id="reg">
+<section class="panel" id="reg"><span id="register"></span>
   <div class="in">
     <div class="head"><span class="tag">#как попасть</span><h2>Участие — в подписке PRO</h2><p>Мастер-класс открыт для участников «Финансового кружка». Оформляете PRO на месяц — и получаете <mark>мастер-класс и всё, что есть в кружке</mark>.</p></div>
     <div class="afisha">
@@ -472,7 +473,7 @@ footer .disc{flex-basis:100%;font-size:13px}
 </footer>
 
 <div class="cookie" id="cookie" hidden><p>Мы используем cookie и Яндекс Метрику, чтобы сайт работал лучше. <a href="privacy.html">Подробнее</a></p><button type="button" id="cookieOk">Ок</button></div>
-<div class="stick"><a class="btn" data-goal="cta_sticky" href="#reg">Участвовать 8 ноября</a></div>
+<div class="stick" id="stick"><a class="btn" data-goal="cta_sticky" href="#reg">Участвовать 8 ноября</a></div>
 
 <script>
 (function(){
@@ -524,6 +525,10 @@ var CAMPAIGN = 'meetup_0811';
 <script>
 (function(){var c=document.getElementById('cookie');var ok=false;try{ok=localStorage.getItem('fc_cookie')==='1'}catch(e){}
 if(!ok)c.hidden=false;document.getElementById('cookieOk').onclick=function(){c.hidden=true;try{localStorage.setItem('fc_cookie','1')}catch(e){}};})();
+</script>
+<script>
+(function(){var s=document.getElementById('stick'),r=document.getElementById('reg');if(!s||!r||!('IntersectionObserver' in window))return;
+new IntersectionObserver(function(e){s.hidden=e[0].isIntersecting}).observe(r);})();
 </script>
 </body>
 </html>
